@@ -1,0 +1,434 @@
+
+/*---------*\
+    Style    
+\*---------*/
+
+/*--------------------------*\
+copyright 2024 - Maria Cecília
+\*--------------------------*/
+
+/*---------------------*\
+Propriedades customizadas
+\*---------------------*/
+
+:root{
+    /*-------GUIA DE CORES-------*/
+
+    /*CORES PRINCIPAIS*/
+    --branco: rgb(255, 255, 255);
+    --branco-50: rgb(255, 255, 255, 0.5);
+    --v-claro: #ccfad8;
+    --v-medio: #2bd9a8;
+    --v-bandeira: #1C4F06;
+    --v-escuro: #0F4037;
+    --preto: rgb(13, 13, 13);
+    --preto-80: rgba(13, 13, 13, 0.8);
+    /*CORES ROMANCE*/
+    --rosa-escuro: #952bbe;
+    --rosa-claro: #ec9eff;
+  
+    /*-------TIPOGRAFIA-------*/
+
+    /*FONTES*/
+    --ff-Amaranth: "Amaranth", serif;
+    --ff-Instrument: "Instrument Sans", serif; 
+
+    /*TAMANHOS*/
+    --h0-50: 3.5rem;
+    --h1-40: 2.5rem;
+    --h2-34: 2.1rem;
+    --h3-28: 1.8rem;
+    --h4-24: 1.5rem;
+    --h5-18: 1.1rem;
+    --h6-16: 1rem;
+    --h7-14: 0.8rem;
+
+    /*ARREDONDAR CANTO*/
+    --circulo: 100px;
+    --radius-50: 50px;
+    --radius-10: 10px;
+   
+    /*DEGRADÊ - GRADIENTE*/
+    --gradient-preto: linear-gradient(to bottom, #0d0d0d 100%);
+}
+
+body{
+    background-color: var(--preto);
+}
+/*-----RESET-----*/
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-weight: 400;
+}
+
+h3{
+    font-weight: 500;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+/*---------------
+      HEADER
+---------------*/
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    background-color: var(--preto-80);
+    backdrop-filter: blur(10px);
+    border: 4px;
+    border-bottom-style: solid;
+    border-color: var(--branco);
+    height: 100px;
+    width: 100%;
+    padding: 0 30px;
+    z-index: 10;
+}
+
+.header-itens{
+    height: 100px;
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.pesquisa{
+    width: 50%;
+    height: 50px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--rosa-escuro);
+    border-radius: var(--radius-10);
+}
+
+#buscar{
+    color: var(--branco);
+    font-family: var(--ff-Instrument);
+    font-size: var(--h4-24);
+}
+
+#icon-group{
+    display: flex;
+    justify-content: center;
+}
+
+.icon-list {    
+    display: flex;
+    gap: 20px;
+}
+
+.icon-item{
+    width: 40px;
+    height: 40px;
+    color: var(--branco);
+}
+
+.icon-item:hover{
+    color: var(--rosa-claro);
+    cursor: pointer;
+}
+
+.social-icon{
+    padding-bottom: 10px;
+}
+
+.social-list{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.social-item{
+    width: 20px;
+    height: 20px;
+    color: var(--branco);
+}
+
+.social-item:hover{
+    color: var(--rosa-claro);
+    cursor: pointer;
+}
+
+/*---------------
+      MENU
+---------------*/
+.menu{
+    top: 100px;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    background-color: var(--branco-50);
+    backdrop-filter: blur(10px);
+    border: 2px;
+    border-bottom-style: solid;
+    border-color: var(--branco);
+    border-radius: 0 0 50px 50px;
+    z-index: 10;
+}
+
+.menu-list{
+    padding-left: 30%;
+    padding-right: 30%;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--ff-Instrument);
+    font-size: var(--h4-24);
+    font-weight: 600;
+}
+
+.menu-link{
+    text-decoration: none;
+    color: var(--preto);
+}
+
+.menu-link:hover{
+    text-decoration: underline;
+}
+
+/*---------------
+     SEÇÕES
+---------------*/
+#inicio{
+    padding-top: 100px;
+}
+
+
+
+.escritor{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-top:100px ;
+    gap: 100px;
+    border-bottom: solid 2px;
+    border-color: var(--rosa-claro);
+}
+
+#bio-name{
+    font-family: var(--ff-Amaranth);
+    font-size: var(--h1-40);
+    color: var(--branco);
+    margin-bottom: 25px;
+}
+
+.bio{
+    width: 750px;
+    font-family: var(--ff-Instrument);
+    font-size: var(--h4-24);
+    color: var(--branco);
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.img-escritor{
+    height: 400px;
+    width: 400px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    border:solid 2px var(--branco);
+}
+
+.h1{
+    font-family: var(--ff-Amaranth);
+    font-size: var(--h2-34);
+    color: var(--branco);
+    margin-bottom: 40px;
+    text-decoration: underline 2px;
+}
+
+.space{
+    display: flex;
+    flex-direction: column;
+    padding: 70px 0 70px 200px;
+}
+
+.cards{
+    display: flex;
+    justify-content:flex-start;
+    gap: 30px;
+}
+
+.grupo{
+    text-align: center;
+    display:flex;
+    justify-self: center;
+    align-content: center;
+    flex-direction: column;
+    color: var(--branco);
+    font-size:var(--h4-24) ;
+    font-family: var(--ff-Instrument);
+}
+
+.text{
+    margin-top: 10px;
+    color: var(--branco);
+    font-size:var(--h4-24) ;
+    font-family: var(--ff-Instrument);
+}
+
+.text:hover{
+    color: var(--rosa-claro);
+}
+
+.livro-m{
+    background-position: center;
+    background-size: cover;
+    width: 250px;
+    height: 375px;
+}
+
+.livro-m:hover{
+    opacity: 0.5;
+}
+
+
+
+
+
+/*---------------
+    RODAPE
+---------------*/
+
+.icon-contato {
+    height: 30px;
+    width: 30px;
+}
+.email{
+    gap: 8px;
+    display: flex;
+    padding: 10px;
+    text-align:center;
+    color:var(--branco);
+    
+}
+.email h1{
+    font-family: var(--ff-Amaranth);
+    font-size:var(--h3-28) ;
+}
+    
+
+.what{
+    gap: 8px;
+    padding: 10px;
+    color: var(--branco);
+    text-align:end;
+}
+
+.what h1{
+    font-family: var(--ff-Amaranth);
+    font-size: var(--h3-28);
+}
+
+.data{
+    font-size: var(--h5-18);
+    font-family: var(--ff-Instrument);
+}
+
+.font{
+    display: flex;
+    gap: 5px;
+    font-size: var(--h3-28);
+    
+}
+
+.roda{
+    display:flex;
+    justify-content: space-around;
+    gap: 600px;
+    background-color:var(--preto);
+    height: 90px;
+    align-items: center;
+    border-top: solid 2px var(--rosa-claro);
+}
+
+.final{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--branco);
+    font-size: var(--h5-18);
+    font-family: var(--ff-Instrument) ;
+        
+}
+
+.logo-footer{
+    padding: 20px;
+}
+
+#title{
+    margin-bottom: 10px;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+li a{
+    text-decoration: none;
+    color: black;
+}
+
+#transparente a{
+    color: transparent;
+    cursor: default;
+}
+
+.meios{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.pagamento{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+        
+}
+ .linha{
+    background-color: black;
+    height: 2px;
+ }
+
+.copy{
+    background-color: white;
+    font-size: var(--h4-24);
+    text-align: center;
+    font-family: var(--ff-Instrument);
+    padding: 10px 10px;  
+}
+
+#up{
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+}
+
+#img-up{
+    width: 60px;
+    height: 60px;
+}
